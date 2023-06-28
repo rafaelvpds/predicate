@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class Program {
 
@@ -16,8 +15,8 @@ public class Program {
 		listaProdutos.add(new Product("Tablet", 350.50));
 		listaProdutos.add(new Product("HD case", 80.90));
 
-		// predicado implementado maualmente atraves de uma interface
-		listaProdutos.removeIf(new ProductPredicate());
+		// Reference Method com metodo estatico
+		listaProdutos.removeIf(Product::staticProductPredicate);
 		for (Product p : listaProdutos) {
 			System.out.println(p);
 		}
