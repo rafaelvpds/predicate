@@ -15,10 +15,10 @@ public class Program {
 		listaProdutos.add(new Product("Mouse", 50.00));
 		listaProdutos.add(new Product("Tablet", 350.50));
 		listaProdutos.add(new Product("HD case", 80.90));
-
+		double min = 100.0;
 		// Expressao lambda declarada
 		// expressao anonima que recebe como argumento Produto p
-		Predicate<Product> pred = p -> p.getPrice() >= 100;
+		Predicate<Product> pred = p -> p.getPrice() >= min;
 
 		listaProdutos.removeIf(pred);
 		for (Product p : listaProdutos) {
