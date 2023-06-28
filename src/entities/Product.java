@@ -25,16 +25,6 @@ public class Product {
 		this.price = price;
 	}
 
-//metodo estatico va trabalhar com o argumento passado na função
-	public static boolean staticProductPredicate(Product p) {
-		return p.getPrice() >= 100;
-	}
-
-//vai trabalhar coma a propria instancia
-	public boolean noStaticProductPredicate() {
-		return price >= 100;
-	}
-
 	@Override
 	public String toString() {
 		return "nome = " + nome + ", price = " + String.format("%.2f", price);
